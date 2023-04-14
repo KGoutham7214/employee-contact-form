@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div><h1>Update Employee Form</h1></div>
+        <div>
+            <form action="" method="post">
+                <input value="<%= employees[0].id %>" type="hidden" name="id" required>
+                <label for="name">Name:</label>
+                <input value="<%= employees[0].name %>" type="text" id="name" name="name" required><br>
+              
+                <label for="email">Email:</label>
+                <input value="<%= employees[0].email %>" type="email" id="email" name="email" required><br>
+              
+                <label for="phone">Phone:</label>
+                <input value="<%= employees[0].phone %>" type="tel" id="phone" name="phone"><br>
+              
+                <label for="address">Address:</label>
+                <input value="<%= employees[0].address %>" type="text" id="address" name="address" required><br>
+    
+                <label for="secName">Secondary Contact Name:</label>
+                <input value="<%= employees[0].sec_name %>" type="text" id="secName" name="secName" required><br>
+    
+                <label for="secPhone">Secondary Contact Phone:</label>
+                <input value="<%= employees[0].sec_phone %>" type="text" id="secPhone" name="secPhone" required><br>
+    
+                <label for="secRelation">Secondary Contact Relation:</label>
+                <input value="<%= employees[0].sec_relation %>" type="text" id="secRelation" name="secRelation" required><br>
+              
+                <button type="submit" value="submit" >Submit</button>
+              </form>   
+        </div>
+    </body>
+</html>

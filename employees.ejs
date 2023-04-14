@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Employee List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Employee List</h1>
+
+        <table border="1" width=" 100%">
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Secondary Contact Name</th>
+                <th>Secondary Contact Phone</th>
+                <th>Secondary Contact Relation</th>
+                <th>Actions</th>
+            </tr>
+
+            <% if(employees.length > 0) { %>
+                <% for(var i=0;i<employees.length;i++){%>
+                    <tr>
+                        
+                        <td><%= employees[i].name %></td>
+                        <td><%= employees[i].phone %></td>
+                        <td><%= employees[i].address %></td>
+                        <td><%= employees[i].sec_name %></td>
+                        <td><%= employees[i].sec_phone %></td>
+                        <td><%= employees[i].sec_relation %></td>
+                        <td>
+                            <a href="/delete-employee?id=<%- employees[i].id %>">Delete</a>
+                            <a href="/update-employee?id=<%- employees[i].id %>">Update</a>
+
+                        </td>
+                    </tr>
+                <% } %>
+            <% }else{ %>
+                
+                <h1>No records found</h1>
+                <% } %>
+        </table>
+
+    </body>
+</html>
